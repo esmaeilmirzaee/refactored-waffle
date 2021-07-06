@@ -1,0 +1,21 @@
+{
+    "manifest_version": 3,
+    "name": "TimePomodoro",
+    "version": "1.0.0",
+    "description": "Time Pomodoro extension application",
+    "icons": {
+        "16": "icon.png",
+        "48": "icon.png",
+        "128": "icon.png"
+    },
+    "action": {
+        "default_icons": {
+            "16": "icon.png",
+            "32": "icon.png",
+            "48": "icon.png"
+        },
+        "default_title": "Click on me",
+        "default_popup": "popup.html"
+    },
+    "permissions": ["storage"]
+}
