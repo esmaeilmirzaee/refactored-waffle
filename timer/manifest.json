@@ -17,6 +17,9 @@
         "default_title": "Click on me",
         "default_popup": "popup.html"
     },
-    "permissions": ["storage"],
-    "options_page": "options.html"
+    "options_page": "options.html",
+    "permissions": ["storage", "alarms"],
+    "background": {
+        "service_worker": "bck.js"
+    }
 }
