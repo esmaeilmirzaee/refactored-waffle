@@ -8,8 +8,14 @@ chrome.alarms.onAlarm.addListener((alarm) => {
         });
     });
 
-    this.registration.showNotification('PomodoroTime', {
-        body: 'A second has passed.',
-        icon: 'icon.png',
+    chrome.storage.sync.get(['timer', 'delay'], (res) => {
+        let delayTime = res.delay ?? 0;
+        let time = res.timer ?? 0;
+        if (delayTime > 0) {
+            this.registration.showNotification('PomodoroTime', {
+                body: `${delayTime} seconds has passed.`,
+                icon: 'icon.png',
+            });
+        }
     });
 });

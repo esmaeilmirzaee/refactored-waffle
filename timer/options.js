@@ -4,7 +4,9 @@ chrome.storage.sync.get(['timer', 'delay'], (res) => {
     document.getElementById('delay').value = res.delay ?? 1000;
 });
 
-chrome.storage.sync.set({
-    timer: new Date().toLocaleTimeString(),
-    delay: document.getElementById('delay').value,
+document.addEventListener('submit', () => {
+    chrome.storage.sync.set({
+        timer: new Date().toLocaleTimeString(),
+        delay: document.getElementById('delay').value,
+    });
 });
