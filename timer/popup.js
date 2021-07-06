@@ -11,6 +11,11 @@ function updateTime() {
     chrome.action.setBadgeText({
         text: time,
     });
+
+    chrome.storage.sync.get(['delay'], (res) => {
+        document.getElementById('date', res.delay ?? 0);
+        console.log(res.delay);
+    });
 }
 
 updateTime();
