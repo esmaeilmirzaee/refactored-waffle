@@ -17,6 +17,6 @@
         "default_title": "Click on me",
         "default_popup": "popup.html"
     },
-    "permissions": ["storage", "alarms"],
+    "permissions": ["storage"],
     "options_page": "options.html"
 }
