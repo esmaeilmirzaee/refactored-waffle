@@ -6,8 +6,10 @@ chrome.alarms.onAlarm.addListener((alarm) => {
         chrome.storage.local.set({
             timer: time + 1,
         });
-        chrome.action.setBadgeText({
-            text: `${new Date().toLocaleTimeString()}`,
-        });
+    });
+
+    this.registration.showNotification('PomodoroTime', {
+        body: 'A second has passed.',
+        icon: 'icon.png',
     });
 });
