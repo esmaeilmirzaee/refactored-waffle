@@ -7,9 +7,30 @@
         <link rel="stylesheet" href="styles.css" />
         <title>Pomodoro time</title>
     </head>
-    <body>
+    <body class="flex flex-col p-2 items-center">
         <h1 class="text-indigo-800 text-center text-3xl">Welcome</h1>
         <span class="text-center text-lg text-red-500" id="options_time"></span>
+        <hr />
+        <form class="form">
+            <div>
+                <img class="p-1 mx-auto w-1/12" src="icon.png" alt="logo" />
+            </div>
+            <label for="delay" class="text-indigo-600 text-md">Delay</label>
+            <input
+                type="text"
+                class="
+                    focus:ring-indigo-500 focus:border-indigo-500
+                    sm:text-sm
+                    block
+                    w-full
+                    border-gray-300
+                    rounded-md
+                "
+                placeholder="delay (ms)"
+                id="delay"
+                name="delay"
+            />
+        </form>
     </body>
     <script src="options.js"></script>
 </html>
