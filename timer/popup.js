@@ -7,6 +7,11 @@ function updateTime() {
     chrome.storage.local.set({ timer: time }, () => {
         console.log(`Timer is set to ${time}.`);
     });
+
+    chrome.action.setBadgeText({
+        text: time,
+    });
 }
 
+updateTime();
 setInterval(updateTime, 1000);
